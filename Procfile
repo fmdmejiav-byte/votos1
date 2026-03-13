@@ -1,1 +1,1 @@
-web: python app.py
+web: python votaciones_app/app.py
