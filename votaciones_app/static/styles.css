@@ -1,0 +1,94 @@
+/* Reset general */
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+/* Fondo estilo iPhone */
+body{
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
+	background: linear-gradient(135deg,#0f0f0f,#1c1c1e,#2c2c2e);
+	min-height:100vh;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	color:white;
+}
+
+/* Tarjeta premium */
+.container{
+	background: rgba(255,255,255,0.08);
+	backdrop-filter: blur(20px);
+	border-radius:25px;
+	padding:40px;
+	width:380px;
+	box-shadow:
+	0 10px 40px rgba(0,0,0,0.6),
+	inset 0 1px 1px rgba(255,255,255,0.2);
+}
+
+/* Titulo */
+h1{
+	text-align:center;
+	margin-bottom:25px;
+	font-weight:600;
+	letter-spacing:1px;
+}
+
+/* Inputs premium */
+input{
+	width:100%;
+	padding:14px;
+	margin-bottom:15px;
+	border:none;
+	border-radius:12px;
+	background:rgba(255,255,255,0.12);
+	color:white;
+	font-size:15px;
+	outline:none;
+	transition:0.3s;
+}
+
+/* Efecto al seleccionar */
+input:focus{
+	background:rgba(255,255,255,0.18);
+	box-shadow:0 0 10px rgba(255,255,255,0.2);
+}
+
+/* Botón estilo iPhone */
+button{
+	width:100%;
+	padding:14px;
+	border:none;
+	border-radius:14px;
+	font-size:16px;
+	font-weight:600;
+	background: linear-gradient(135deg,#0071e3,#00c6ff);
+	color:white;
+	cursor:pointer;
+	transition:0.3s;
+}
+
+/* Hover */
+button:hover{
+	transform:scale(1.03);
+	box-shadow:0 8px 20px rgba(0,113,227,0.6);
+}
+
+/* Resultado */
+.resultado{
+	text-align:center;
+	font-size:18px;
+	line-height:1.8;
+}
+
+/* Links */
+a{
+	display:block;
+	text-align:center;
+	margin-top:15px;
+	text-decoration:none;
+	color:#00c6ff;
+	font-weight:500;
+}
