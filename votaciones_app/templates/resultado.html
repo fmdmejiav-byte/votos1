@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Resultado</title>
+	<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div class="container">
+	<h1>Datos del votante</h1>
+	{% if error %}
+		<p style="color:lightcoral">{{ error }}</p>
+	{% endif %}
+	{% if nombre %}
+		<p class="resultado">Nombre: {{ nombre }}</p>
+		<p class="resultado">Ciudad: {{ ciudad }}</p>
+		<p class="resultado">Departamento: {{ departamento }}</p>
+		<p class="resultado">Puesto: {{ puesto }}</p>
+		<p class="resultado">Mesa: {{ mesa }}</p>
+	{% else %}
+		<form action="/resultado" method="POST">
+			<input type="text" name="cedula" required>
+			<button type="submit">Buscar</button>
+		</form>
+		{% if cedula %}
+			<p>No existe la cédula {{ cedula }}. <a href="/registro?cedula={{ cedula }}">Registrar nueva cédula</a></p>
+		{% endif %}
+	{% endif %}
+	<a href="/">Volver al inicio</a>
+</div>
+</body>
+</html>
