@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Registro</title>
+	<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div class="container">
+	<h1>Registrar votante</h1>
+{% if success %}
+	<p style="color:green">Registro guardado correctamente.</p>
+{% endif %}
+{% if error %}
+	<p style="color:red">Error al guardar: {{ msg }}</p>
+{% endif %}
+<form action="/guardar" method="POST">
+	<input type="text" name="cedula" placeholder="Cédula" required value="{{ cedula if cedula else '' }}"><br><br>
+	<input type="text" name="nombre" placeholder="Nombre" required><br><br>
+	<input type="text" name="ciudad" placeholder="Ciudad"><br><br>
+	<input type="text" name="departamento" placeholder="Departamento"><br><br>
+	<input type="text" name="puesto" placeholder="Puesto"><br><br>
+	<input type="number" name="mesa" placeholder="Mesa"><br><br>
+	<button type="submit">Registrar</button>
+</form>
+	<p><a href="/">Volver al inicio</a></p>
+</div>
+</body>
+</html>
