@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Consulta de votación</title>
+	<link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+<div class="container">
+	<h1>Consultar lugar de votación</h1>
+
+	<form action="/resultado" method="POST">
+		<input type="text" name="cedula" placeholder="Ingrese su cédula" required>
+		<button type="submit">Consultar</button>
+	</form>
+
+	<a href="/registro">Ir a registro</a>
+</div>
+
+</body>
+</html>
